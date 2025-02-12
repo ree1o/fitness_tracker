@@ -12,11 +12,18 @@ const pool = new Pool({
     connectionString: process.env.DB_URL,
 });
 
-app.use(express.static(path.join(__dirname, 'frontend')));
+const path = require('path');
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'frontend', 'index.html'));
+app.use(express.static(path.join(__dirname, '../front-end')));
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../front-end', 'index.html'));
+  });
+  
+app.get('/api', (req, res) => {
+  res.json({ message: "API is working" });
 });
+
 
 app.use(express.json());
 app.use(cors());
@@ -205,4 +212,7 @@ app.get("/api/workouts", authenticateToken, async (req, res) => {
     }
 });
 
-app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on port http://localhost:${PORT}`);
+});
