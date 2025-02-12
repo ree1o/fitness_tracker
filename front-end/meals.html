@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Planner - Fitness Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/activity-tracker.png" alt="Fitness Tracker Logo">
+                <span>Fitness Tracker</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="workouts.html">Workouts</a></li>
+                <li><a href="meals.html" class="active">Meals</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li id="auth-link"><a href="login.html" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="meal-section">
+        <h1>Plan Your Meals</h1>
+        <p>Track your daily meals and maintain a balanced diet.</p>
+        
+        <div class="meal-container">
+            <form id="meal-form">
+                <input type="text" id="meal-name" placeholder="Meal Name" required>
+                <input type="number" id="meal-calories" placeholder="Calories" required>
+                <input type="date" id="meal-date" required>
+                <button type="submit">Add Meal</button>
+            </form>            
+        </div>
+        
+        <h2>Your Meals</h2>
+        <ul id="meal-list"></ul>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Fitness Tracker | All rights reserved</p>
+            <div class="social-icons">
+                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/telegram.png" alt="Telegram"></a>
+                <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

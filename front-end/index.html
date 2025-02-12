@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/activity-tracker.png" alt="Fitness Tracker Logo">
+                <span>Fitness Tracker</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="workouts.html">Workouts</a></li>
+                <li><a href="meals.html">Meals</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li id="auth-link"><a href="login.html" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Track Your Fitness Goals</h1>
+            <p>Stay motivated and achieve your health objectives with ease.</p>
+            <a href="register.html" class="cta-btn">Get Started</a>
+        </div>
+    </section>
+
+    <section class="bmi-calculator">
+        <h2>BMI Calculator</h2>
+        <form id="bmi-form">
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="bmi-weight" name="weight" required>
+
+            <label for="height">Height (cm):</label>
+            <input type="number" id="bmi-height" name="height" required>
+
+            <button type="submit" class="cta-btn">Calculate BMI</button>
+        </form>
+
+        <div id="bmi-result" class="bmi-result" style="display:none;">
+            <p>Your BMI is: <span id="bmi-value"></span></p>
+            <p id="bmi-category"></p>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2>Why Choose Fitness Tracker?</h2>
+        <div class="feature-container">
+            <div class="feature-box">
+                <h3>📊 Progress Tracking</h3>
+                <p>Monitor your workout progress with interactive charts.</p>
+            </div>
+            <div class="feature-box">
+                <h3>🥗 Meal Planning</h3>
+                <p>Plan healthy meals and keep track of your calorie intake.</p>
+            </div>
+            <div class="feature-box">
+                <h3>🔒 Secure & Private</h3>
+                <p>Your data is encrypted and stored securely.</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Fitness Tracker | All rights reserved</p>
+            <div class="social-icons">
+                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/telegram.png" alt="Telegram"></a>
+                <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

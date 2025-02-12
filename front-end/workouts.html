@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workouts - Fitness Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">
+            <img src="images/activity-tracker.png" alt="Fitness Tracker Logo">
+            <span>Fitness Tracker</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="workouts.html" class="active">Workouts</a></li>
+            <li><a href="meals.html">Meals</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li id="auth-link"><a href="login.html" class="login-btn">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="workout-section">
+    <h1>Log Your Workouts</h1>
+    <p>Track your daily exercises and improve your fitness.</p>
+
+    <div class="workout-container">
+        <form id="workout-form">
+            <input type="text" id="workout-name" placeholder="Workout Name (e.g. Running, Cycling)" required>
+            <input type="number" id="workout-duration" placeholder="Duration (minutes)" required>
+    
+            <p>Estimated Calories Burned: <span id="calories-display">0</span> kcal</p>
+
+            <button type="submit">Add Workout</button>
+        </form>
+    </div>
+
+    <h2>Your Workouts</h2>
+    <ul id="workout-list"></ul>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2025 Fitness Tracker | All rights reserved</p>
+        <div class="social-icons">
+            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="images/telegram.png" alt="Telegram"></a>
+            <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
