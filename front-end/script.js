@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         try {
-            const response = await fetch("http://localhost:5000/api/calculate-bmi", {
+            const response = await fetch("https://fitness-tracker-b3q1.onrender.com", {
                 method: "POST",
                 headers: { "Content-Type": "application/json", "Authorization": `Bearer ${token}` },
                 body: JSON.stringify({ weight, height, email })
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         try {
-            const response = await fetch("http://localhost:5000/api/login", {
+            const response = await fetch("https://fitness-tracker-b3q1.onrender.com", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email, password })
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         try {
-            const response = await fetch("http://localhost:5000/api/profile", {
+            const response = await fetch("https://fitness-tracker-b3q1.onrender.com", {
                 method: "GET",
                 headers: { "Authorization": `Bearer ${token}` }
             });
@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        const userResponse = await fetch("http://localhost:5000/api/profile", {
+        const userResponse = await fetch("https://fitness-tracker-b3q1.onrender.com", {
             method: "GET",
             headers: { "Authorization": `Bearer ${token}` }
         });
@@ -200,7 +200,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const calories = await calculateCaloriesFromAPI(workoutName, duration, weight, height, age);
 
         try {
-            const response = await fetch("http://localhost:5000/api/workouts", {
+            const response = await fetch("https://fitness-tracker-b3q1.onrender.com", {
                 method: "POST",
                 headers: { "Content-Type": "application/json", "Authorization": `Bearer ${token}` },
                 body: JSON.stringify({ name: workoutName, duration, calories, date: new Date().toISOString().split("T")[0] })
@@ -226,7 +226,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!token) return;
     
         try {
-            const response = await fetch("http://localhost:5000/api/workouts", {
+            const response = await fetch("https://fitness-tracker-b3q1.onrender.com", {
                 method: "GET",
                 headers: { "Authorization": `Bearer ${token}` }
             });
@@ -263,7 +263,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         try {
-            const response = await fetch("http://localhost:5000/api/meals", {
+            const response = await fetch("https://fitness-tracker-b3q1.onrender.com", {
                 method: "POST",
                 headers: { "Content-Type": "application/json", "Authorization": `Bearer ${token}` },
                 body: JSON.stringify({ meal_name: mealName, calories, date })
@@ -289,7 +289,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!token) return;
 
         try {
-            const response = await fetch("http://localhost:5000/api/meals", {
+            const response = await fetch("https://fitness-tracker-b3q1.onrender.com", {
                 method: "GET",
                 headers: { "Authorization": `Bearer ${token}` }
             });
@@ -319,7 +319,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!token) return;
 
         try {
-            const response = await fetch("http://localhost:5000/api/meals", {
+            const response = await fetch("https://fitness-tracker-b3q1.onrender.com", {
                 method: "GET",
                 headers: { "Authorization": `Bearer ${token}` }
             });
@@ -347,7 +347,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!token) return;
 
         try {
-            const response = await fetch("http://localhost:5000/api/workouts", {
+            const response = await fetch("https://fitness-tracker-b3q1.onrender.com", {
                 method: "GET",
                 headers: { "Authorization": `Bearer ${token}` }
             });
